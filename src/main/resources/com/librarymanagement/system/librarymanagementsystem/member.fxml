@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="570.0" prefWidth="939.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.MemberController">
+    <Label layoutX="453.0" layoutY="1.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Member Management">
+      <font>
+         <Font name="Verdana" size="12.0" />
+      </font></Label>
+    <TableView fx:id="memberTable" layoutX="218.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="719.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="31.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="164.0" text="Name" />
+            <TableColumn fx:id="emailColumn" prefWidth="168.0" text="Email" />
+            <TableColumn fx:id="phoneColumn" prefWidth="123.0" text="Phone" />
+            <TableColumn fx:id="addressColumn" prefWidth="121.0" text="Address" />
+            <TableColumn fx:id="membershipDateColumn" prefWidth="106.0" text="Membership Date" />
+        </columns>
+      <effect>
+         <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+            <color>
+               <Color red="0.44736841320991516" green="0.44736841320991516" blue="0.44736841320991516" />
+            </color>
+         </DropShadow>
+      </effect>
+    </TableView>
+
+     <HBox alignment="center" layoutX="394.0" layoutY="149.0" prefHeight="47.0" prefWidth="326.0" spacing="10">
+         <Button onAction="#handleAddMember" text="Add Member">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+         </effect></Button>
+         <Button onAction="#handleEditMember" text="Edit Member">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+         </effect></Button>
+         <Button onAction="#handleDeleteMember" text="Delete Member">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+         </effect></Button>
+     </HBox>
+
+     <HBox layoutX="278.0" layoutY="38.0" prefHeight="47.0" prefWidth="558.0" spacing="10">
+      <children>
+         <VBox prefHeight="67.0" prefWidth="172.0">
+            <children>
+                   <Label text="Name">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font></Label>
+                   <TextField fx:id="nameField">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect></TextField>
+            </children>
+         </VBox>
+         <VBox prefHeight="92.0" prefWidth="187.0">
+            <children>
+                   <Label text="Email">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font></Label>
+                   <TextField fx:id="emailField">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect></TextField>
+            </children>
+         </VBox>
+         <VBox prefHeight="67.0" prefWidth="172.0">
+            <children>
+                   <Label text="Phone">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+               </Label>
+                   <TextField fx:id="phoneField">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect></TextField>
+            </children>
+         </VBox>
+      </children>
+     </HBox>
+   <HBox layoutX="391.0" layoutY="102.0" prefHeight="47.0" prefWidth="332.0" spacing="10.0">
+      <children>
+         <VBox prefHeight="54.0" prefWidth="151.0">
+            <children>
+                   <Label text="Address">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font></Label>
+                   <TextField fx:id="addressField">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect></TextField>
+            </children></VBox>
+         <VBox prefHeight="54.0" prefWidth="162.0">
+            <children>
+                   <Label text="Membership Date">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font></Label>
+                   <TextField fx:id="membershipDateField" promptText="YYYY-MM-DD">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect></TextField>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <Button fx:id="backButton3" layoutX="26.0" layoutY="473.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="162.0" text="Back to Dashboard">
+      <font>
+         <Font name="Verdana" size="12.0" />
+      </font>
+      <effect>
+         <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+      </effect>
+   </Button>
+   <AnchorPane layoutX="13.0" layoutY="165.0" prefHeight="89.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 45px;">
+      <children>
+         <Text layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Members" textAlignment="CENTER" wrappingWidth="120.0">
+            <font>
+               <Font name="Verdana Bold" size="22.0" />
+            </font>
+            <effect>
+               <DropShadow height="14.0" radius="6.5" width="14.0" />
+            </effect>
+         </Text>
+      </children>
+      <effect>
+         <DropShadow height="14.0" radius="6.5" width="14.0" />
+      </effect>
+   </AnchorPane>
+   <AnchorPane layoutX="210.0" layoutY="6.0" prefHeight="548.0" prefWidth="5.0" style="-fx-background-color: white; -fx-background-radius: 4px;" />
+</AnchorPane>

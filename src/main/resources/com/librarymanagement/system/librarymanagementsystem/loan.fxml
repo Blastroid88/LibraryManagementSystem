@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="510.0" prefWidth="1037.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.LoanController">
+    <TableView fx:id="loanTable" layoutX="289.0" layoutY="186.0" prefHeight="319.0" prefWidth="753.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="23.0" text="ID" />
+            <TableColumn fx:id="bookNameColumn" prefWidth="181.0" text="Book" />
+            <TableColumn fx:id="memberNameColumn" prefWidth="162.0" text="Member" />
+            <TableColumn fx:id="issueDateColumn" prefWidth="100.0" text="Issue Date" />
+            <TableColumn fx:id="dueDateColumn" prefWidth="101.0" text="Due Date" />
+            <TableColumn fx:id="returnDateColumn" prefWidth="91.0" text="Return Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="91.0" text="Status" />
+        </columns>
+      <effect>
+         <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+            <color>
+               <Color red="0.3815789520740509" green="0.3815789520740509" blue="0.3815789520740509" />
+            </color>
+         </DropShadow>
+      </effect>
+    </TableView>
+    <HBox layoutX="494.0" layoutY="142.0" prefHeight="34.0" prefWidth="348.0" spacing="10.0">
+        <Button onAction="#handleAddLoan" prefHeight="25.0" prefWidth="105.0" text="Add Loan">
+            <font>
+                <Font name="Verdana" size="12.0" />
+            </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+               <color>
+                  <Color red="0.5" green="0.5" blue="0.5" />
+               </color></DropShadow>
+         </effect>
+        </Button>
+        <Button onAction="#handleEditLoan" prefHeight="25.0" prefWidth="105.0" text="Edit Loan">
+            <font>
+                <Font name="Verdana" size="12.0" />
+            </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+               <color>
+                  <Color red="0.5" green="0.5" blue="0.5" />
+               </color></DropShadow>
+         </effect>
+        </Button>
+        <Button onAction="#handleDeleteLoan" prefHeight="25.0" prefWidth="104.0" text="Delete Loan">
+            <font>
+                <Font name="Verdana" size="12.0" />
+            </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+               <color>
+                  <Color red="0.5" green="0.5" blue="0.5" />
+               </color></DropShadow>
+         </effect>
+        </Button>
+    </HBox>
+    <HBox layoutX="413.0" layoutY="42.0" prefHeight="100.0" prefWidth="492.0" spacing="15.0">
+        <children>
+            <VBox prefHeight="100.0" prefWidth="149.0">
+                <children>
+                    <Label text="Book:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="bookComboBox" prefWidth="150.0" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></ComboBox>
+                    <Label text="Issue Date:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <DatePicker fx:id="issueDatePicker" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></DatePicker>
+                </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="151.0">
+                <children>
+                    <Label text="Member:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="memberComboBox" prefWidth="150.0" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></ComboBox>
+                    <Label text="Due Date:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <DatePicker fx:id="dueDatePicker" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></DatePicker>
+                </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="152.0">
+                <children>
+                    <Label text="Status:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="statusComboBox" prefWidth="150.0" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></ComboBox>
+                    <Label text="Return Date:">
+                        <font>
+                            <Font name="Verdana" size="12.0" />
+                        </font>
+                    </Label>
+                    <DatePicker fx:id="returnDatePicker" style="-fx-background-radius: 4px;">
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.5" green="0.5" blue="0.5" />
+                        </color>
+                     </DropShadow>
+                  </effect></DatePicker>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+    <AnchorPane layoutY="4.0" prefHeight="506.0" prefWidth="288.0">
+        <children>
+            <AnchorPane layoutX="19.0" layoutY="102.0" prefHeight="92.0" prefWidth="238.0" style="-fx-background-color: white; -fx-background-radius: 45px;">
+                <children>
+                    <Text layoutX="31.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue/Return Books" textAlignment="CENTER" wrappingWidth="177.0">
+                        <font>
+                            <Font name="Verdana Bold" size="22.0" />
+                        </font>
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+                  </effect>
+                    </Text>
+                </children>
+            <effect>
+               <DropShadow height="14.0" radius="6.5" width="14.0">
+                  <color>
+                     <Color red="0.32894736528396606" green="0.32285574078559875" blue="0.32285574078559875" />
+                  </color>
+               </DropShadow>
+            </effect>
+            </AnchorPane>
+            <Button fx:id="backButton2" layoutX="24.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleBack2" prefHeight="25.0" prefWidth="229.0" style="-fx-background-radius: 8px;" text="Back to Dashboard">
+                <font>
+                    <Font name="Verdana" size="14.0" />
+                </font>
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                  <color>
+                     <Color red="0.32894736528396606" green="0.32894736528396606" blue="0.32894736528396606" />
+                  </color>
+               </DropShadow>
+            </effect>
+            </Button>
+            <AnchorPane layoutX="281.0" layoutY="15.0" prefHeight="486.0" prefWidth="5.0" style="-fx-background-color: white; -fx-background-radius: 3px;" />
+         <AnchorPane layoutX="19.0" layoutY="48.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="29.0" layoutY="58.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="39.0" layoutY="68.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="49.0" layoutY="78.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="29.0" layoutY="218.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="39.0" layoutY="228.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="49.0" layoutY="238.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="59.0" layoutY="248.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: white;" />
+        </children>
+    </AnchorPane>
+    <Text layoutX="609.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Section">
+        <font>
+            <Font name="Verdana Bold" size="14.0" />
+        </font>
+    </Text>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.RegisterController">
+   <AnchorPane layoutX="323.0" layoutY="-2.0" prefHeight="402.0" prefWidth="346.0" style="-fx-background-color: lightblue;">
+      <children>
+         <Text layoutX="52.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" textAlignment="CENTER" wrappingWidth="242.9580078125">
+            <font>
+               <Font name="Verdana Bold" size="22.0" />
+            </font>
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" />
+            </effect>
+         </Text>
+         <AnchorPane layoutX="57.0" layoutY="101.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="67.0" layoutY="111.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="77.0" layoutY="121.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="87.0" layoutY="131.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="57.0" layoutY="236.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="67.0" layoutY="246.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="77.0" layoutY="256.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+         <AnchorPane layoutX="87.0" layoutY="266.0" prefHeight="5.0" prefWidth="202.0" style="-fx-background-color: white;" />
+      </children></AnchorPane>
+   <AnchorPane layoutX="16.0" layoutY="85.0" prefHeight="231.0" prefWidth="292.0" style="-fx-background-color: lightblue; -fx-background-radius: 65px;">
+      <children>
+          <VBox layoutX="76.0" layoutY="14.0" prefHeight="203.0" prefWidth="202.0" spacing="10.0">
+              <Label alignment="CENTER" prefHeight="30.0" prefWidth="140.0" style="-fx-font-size: 20;" text="Register">
+               <font>
+                  <Font name="Verdana Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+               </effect>
+            </Label>
+              <TextField fx:id="usernameField" promptText="Username">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                     </color></DropShadow>
+               </effect></TextField>
+              <PasswordField fx:id="passwordField" promptText="Password">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                     </color></DropShadow>
+               </effect></PasswordField>
+              <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                     </color></DropShadow>
+               </effect></PasswordField>
+              <TextField fx:id="roleField" promptText="Role (Admin/User)">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                     </color></DropShadow>
+               </effect></TextField>
+              <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="248.0" spacing="20.0">
+                  <Button fx:id="registerButton" onAction="#handleRegister" style="-fx-background-radius: 4px;" text="Register">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                        </color></DropShadow>
+                  </effect>
+               </Button>
+                  <Button fx:id="cancelButton" onAction="#handleCancel" prefHeight="23.0" prefWidth="73.0" style="-fx-background-radius: 4px;" text="Cancel">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                        <color>
+                           <Color red="0.3947368562221527" green="0.39290934801101685" blue="0.39290934801101685" />
+                        </color></DropShadow>
+                  </effect>
+               </Button>
+              </HBox>
+          </VBox>
+         <Label layoutX="29.0" layoutY="59.0" text="Name:">
+            <font>
+               <Font name="Verdana" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="14.0" layoutY="94.0" text="Password:">
+            <font>
+               <Font name="Verdana" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="32.0" layoutY="164.0" text="Role:">
+            <font>
+               <Font name="Verdana" size="12.0" />
+            </font>
+         </Label>
+      </children></AnchorPane>
+
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginLayout" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.LoginController">
+   <left>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: smoke white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="18.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" textAlignment="CENTER" wrappingWidth="214.6796875">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Text>
+            <BorderPane layoutX="8.0" layoutY="14.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="40.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="69.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="98.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="128.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="260.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="286.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="315.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="344.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+            <BorderPane layoutX="8.0" layoutY="374.0" prefHeight="12.0" prefWidth="235.0" style="-fx-background-color: #ADD8E6;" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="401.0" prefWidth="351.0" style="-fx-background-color: #ADD8E6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="44.0" layoutY="182.0" text="Username">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="220.0" text="Password">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="130.0" layoutY="178.0" prefHeight="25.0" prefWidth="180.0" promptText="Username">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            <Button fx:id="loginButton" layoutX="47.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="28.0" prefWidth="115.0" style="-fx-background-radius: 4px;" text="login">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <PasswordField fx:id="passwordField" layoutX="130.0" layoutY="216.0" prefHeight="25.0" prefWidth="180.0" promptText="Password">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+                     </color>
+                  </DropShadow>
+               </effect></PasswordField>
+            <Button fx:id="clearButton" layoutX="191.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="28.0" prefWidth="113.0" style="-fx-background-radius: 4px;" text="Clear">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="62.0" layoutY="313.0" text="Don't have an account? Create a new user!">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerButton" layoutX="124.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="28.0" prefWidth="113.0" style="-fx-background-radius: 4px;" text="Register">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.4736842215061188" green="0.46929824352264404" blue="0.46929824352264404" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <AnchorPane layoutX="98.0" layoutY="44.0" prefHeight="58.0" prefWidth="151.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 45px;">
+               <children>
+                  <Text fill="#1c1c1c" layoutX="47.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+               </effect>
+            </AnchorPane>
+         </children></AnchorPane>
+   </right>
+</BorderPane>

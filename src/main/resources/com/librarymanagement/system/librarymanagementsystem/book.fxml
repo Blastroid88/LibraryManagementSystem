@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="bookView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1140.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.BookController">
+    <VBox layoutX="187.0" layoutY="89.0" prefHeight="468.0" prefWidth="655.0" spacing="10" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="89.0">
+        <HBox spacing="10">
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Title">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="titleField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Author">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="authorField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Publisher">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="publisherField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="ISBN">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="isbnField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Published Date">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="publishedDateField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></DatePicker>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Category">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="categoryField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+            <VBox spacing="5">
+                <Label contentDisplay="CENTER" text="Quantity">
+                    <font>
+                        <Font name="Verdana" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="quantityField" style="-fx-background-radius: 4px;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#handleAddBook" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 4px;" text="Add">
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                  <color>
+                     <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                  </color>
+               </DropShadow>
+            </effect></Button>
+            <Button onAction="#handleEditBook" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 4px;" text="Edit">
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                  <color>
+                     <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                  </color>
+               </DropShadow>
+            </effect></Button>
+            <Button onAction="#handleDeleteBook" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 4px;" text="Delete">
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                  <color>
+                     <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+                  </color>
+               </DropShadow>
+            </effect></Button>
+        </HBox>
+        <TableView fx:id="bookTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="949.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="21.0" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="225.0" text="Title" />
+                <TableColumn fx:id="authorColumn" prefWidth="146.0" text="Author" />
+                <TableColumn fx:id="publisherColumn" prefWidth="172.0" text="Publisher" />
+                <TableColumn fx:id="isbnColumn" prefWidth="123.0" text="ISBN" />
+                <TableColumn fx:id="publishedDateColumn" minWidth="0.0" prefWidth="91.0" text="Published Date" />
+                <TableColumn fx:id="categoryColumn" prefWidth="109.0" text="Category" />
+                <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="56.0" text="Quantity" />
+            </columns>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+               <color>
+                  <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+               </color>
+            </DropShadow>
+         </effect>
+        </TableView>
+    </VBox>
+    <AnchorPane layoutY="89.0" prefHeight="223.0" prefWidth="166.0">
+        <children>
+            <Text layoutX="19.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books Management" textAlignment="CENTER" wrappingWidth="144.380859375">
+                <font>
+                    <Font name="Verdana" size="22.0" />
+                </font>
+            <effect>
+               <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0" />
+            </effect>
+            </Text>
+            <AnchorPane layoutX="25.0" layoutY="153.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="35.0" layoutY="163.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="45.0" layoutY="173.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="55.0" layoutY="183.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="20.0" layoutY="32.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="30.0" layoutY="42.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="40.0" layoutY="52.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="50.0" layoutY="62.0" prefHeight="6.0" prefWidth="111.0" style="-fx-background-color: white;" />
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutX="-1.0" prefHeight="79.0" prefWidth="1140.0" style="-fx-background-color: white;">
+        <children>
+            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System - Manage Books">
+                <font>
+                    <Font name="Verdana" size="24.0" />
+                </font>
+            </Text>
+            <AnchorPane layoutX="659.0" layoutY="16.0" prefHeight="6.0" prefWidth="394.0" style="-fx-background-color: lightblue;" />
+            <AnchorPane layoutX="669.0" layoutY="26.0" prefHeight="6.0" prefWidth="394.0" style="-fx-background-color: lightblue;" />
+            <AnchorPane layoutX="679.0" layoutY="36.0" prefHeight="6.0" prefWidth="394.0" style="-fx-background-color: lightblue;" />
+            <AnchorPane layoutX="689.0" layoutY="46.0" prefHeight="6.0" prefWidth="394.0" style="-fx-background-color: lightblue;" />
+            <AnchorPane layoutX="699.0" layoutY="56.0" prefHeight="6.0" prefWidth="394.0" style="-fx-background-color: lightblue;" />
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutX="177.0" layoutY="85.0" prefHeight="468.0" prefWidth="6.0" style="-fx-background-color: white; -fx-background-radius: 4px;" />
+    <Button fx:id="backButton" layoutX="16.0" layoutY="479.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.0" style="-fx-background-radius: 4px;" text="Back to Dashboard">
+        <font>
+            <Font name="Verdana" size="12.0" />
+        </font>
+      <effect>
+         <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+            <color>
+               <Color red="0.5921052694320679" green="0.5756579041481018" blue="0.5756579041481018" />
+            </color>
+         </DropShadow>
+      </effect>
+    </Button>
+</AnchorPane>

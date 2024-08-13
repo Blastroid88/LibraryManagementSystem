@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" prefHeight="560.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagement.system.librarymanagementsystem.controller.MainController">
+   <children>
+       <AnchorPane layoutX="458.0" layoutY="172.0" prefHeight="388.0" prefWidth="392.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+           <children>
+               <Button fx:id="manageBooksButton" layoutX="102.0" layoutY="115.0" onAction="#handleManageBooks" prefHeight="34.0" prefWidth="179.0" style="-fx-background-radius: 5px;" text="Manage Books" textAlignment="CENTER">
+                   <font>
+                       <Font name="Verdana" size="14.0" />
+                   </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5" green="0.5" blue="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+               <Button fx:id="manageMembersButton" layoutX="101.0" layoutY="172.0" onAction="#handleManageMembers" prefHeight="34.0" prefWidth="179.0" style="-fx-background-radius: 5px;" text="Manage Members" textAlignment="CENTER">
+                   <font>
+                       <Font name="Verdana" size="14.0" />
+                   </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5" green="0.5" blue="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+               <Button fx:id="manageLoansButton" layoutX="102.0" layoutY="229.0" onAction="#handleManageLoans" prefHeight="34.0" prefWidth="179.0" style="-fx-background-radius: 5px;" text="Issue/Return Books" textAlignment="CENTER">
+                   <font>
+                       <Font name="Verdana" size="14.0" />
+                   </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5" green="0.5" blue="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Button fx:id="logoutButton" layoutX="279.0" layoutY="324.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="77.0" text="Logout">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="14.0" radius="6.5" width="14.0">
+                     <color>
+                        <Color red="0.5" green="0.5" blue="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Text layoutX="164.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sections">
+               <font>
+                  <Font name="Verdana Italic" size="15.0" />
+               </font>
+            </Text>
+           </children>
+       </AnchorPane>
+
+       <AnchorPane layoutX="488.0" layoutY="14.0" prefHeight="158.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+           <children>
+               <Text layoutX="32.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Dashboard" wrappingWidth="269.55859375">
+                   <font>
+                       <Font name="Verdana" size="28.0" />
+                   </font>
+               </Text>
+               <AnchorPane layoutX="2.0" layoutY="95.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+               <AnchorPane layoutX="2.0" layoutY="25.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+               <AnchorPane layoutX="22.0" layoutY="115.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+               <AnchorPane layoutX="12.0" layoutY="105.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+               <AnchorPane layoutX="12.0" layoutY="35.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+               <AnchorPane layoutX="22.0" layoutY="45.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: lightblue;" />
+           </children>
+       </AnchorPane>
+      <AnchorPane prefHeight="560.0" prefWidth="458.0" style="-fx-background-color: lightblue;">
+         <children>
+            <AnchorPane layoutX="444.0" layoutY="6.0" prefHeight="547.0" prefWidth="7.0" style="-fx-background-color: white; -fx-background-radius: 3px;" />
+            <Text layoutX="44.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" textAlignment="CENTER" wrappingWidth="369.0">
+               <font>
+                  <Font name="Verdana Bold Italic" size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="8.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Java Project Work Developed by Group Eight">
+               <font>
+                  <Font name="Verdana" size="10.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="66.0" layoutY="339.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="86.0" layoutY="359.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="76.0" layoutY="349.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="56.0" layoutY="194.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="76.0" layoutY="214.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <AnchorPane layoutX="66.0" layoutY="204.0" prefHeight="8.0" prefWidth="304.0" style="-fx-background-color: white;" />
+            <Label fx:id="usernameLabel" layoutX="54.0" layoutY="49.0" prefHeight="28.0" prefWidth="267.0">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
